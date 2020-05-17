@@ -1,0 +1,36 @@
+{
+  "name": "timeout-manager",
+  "version": "0.0.1",
+  "description": "View and Manage NodeJS's timeout and interval as collections",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc --skipLibCheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stoqey/timeout-manager.git"
+  },
+  "keywords": [
+    "nodejs",
+    "events",
+    "timeout",
+    "interval"
+  ],
+  "author": {
+    "name": "Ceddy Muhoza",
+    "email": "ceddymuhoza@gmail.com",
+    "url": "https://ceddy.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoqey/timeout-manager/issues"
+  },
+  "homepage": "https://github.com/stoqey/timeout-manager",
+  "devDependencies": {
+    "@types/node": "^14.0.1"
+  }
+}

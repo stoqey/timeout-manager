@@ -1,0 +1,6 @@
+.idea/
+.gitignore
+.npmignore
+tsconfig.json
+webpack.config.js
+node_modules/

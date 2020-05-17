@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "lib": [
+      "es6"
+    ],
+    "rootDir": "src",
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "moduleResolution": "Node",
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": false
+  },
+
+  "exclude": [
+    "node_modules",
+    "demo"
+  ]
+}
