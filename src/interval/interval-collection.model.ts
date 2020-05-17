@@ -40,6 +40,15 @@ export class IntervalCollection {
 		return originalClearInterval.apply(global, [id]);
 	}
 
+	public removeByUuid(uuid: string): NodeJS.Timeout | null {
+		const currentIntervalIndex = this._getIntervalIndexByUuid(uuid);
+		const currentIntervalModel = this._intervalCollection[currentIntervalIndex];
+		if (currentIntervalModel && currentIntervalModel.id) {
+			return this.remove(currentIntervalModel.id);
+		}
+		return null;
+	}
+
 	public get(interval: NodeJS.Timeout): IntervalModel {
 		return this._intervalCollection[this._getIntervalIndexById(interval)];
 	}

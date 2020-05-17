@@ -1,5 +1,5 @@
 {
-  "name": "timeout-manager",
+  "name": "@stoqey/timeout-manager",
   "version": "0.0.1",
   "description": "View and Manage NodeJS's timeout and interval as collections",
   "main": "dist/index.js",
@@ -8,7 +8,8 @@
     "dist/"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc --skipLibCheck"
+    "build": "rm -rf dist && tsc --skipLibCheck",
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
