@@ -64,13 +64,7 @@ export class TimeoutCollection {
 	}
 
 	private _getTimeoutIndexById(timeoutId: NodeJS.Timeout): number {
-		for (let i = 0; i < this._timeoutCollection.length; i++) {
-			if (this._timeoutCollection[i].id === timeoutId) {
-				return i;
-			}
-		}
-
-		return -1;
+		return this._timeoutCollection.findIndex(i => i.id === timeoutId)
 	}
 
 	private _getTimeoutIndexByUuid(uuid: string): number {
