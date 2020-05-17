@@ -70,12 +70,6 @@ export class IntervalCollection {
 	}
 
 	private _getIntervalIndexById(intervalId: NodeJS.Timeout): number {
-		for (let i = 0; i < this._intervalCollection.length; i++) {
-			if (this._intervalCollection[i].id === intervalId) {
-				return i;
-			}
-		}
-
-		return -1;
+		return this._intervalCollection.findIndex(i => i.id === intervalId);
 	}
 }
