@@ -47,6 +47,15 @@ export class TimeoutCollection {
 		return this._timeoutCollection[index];
 	}
 
+	public removeByUuid(uuid: string): void {
+		const currentTimeoutIndex = this._getTimeoutIndexByUuid(uuid);
+		const currentTimeoutModel = this._timeoutCollection[currentTimeoutIndex];
+		if (currentTimeoutModel && currentTimeoutModel.id) {
+			this.remove(currentTimeoutModel.id);
+		}
+		return null;
+	}
+
 	public removeAll() {
 		this._timeoutCollection.forEach((timeout: TimeoutModel) => {
 			originalClearTimeout.apply(global, [timeout.id]);
