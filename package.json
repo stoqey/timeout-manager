@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "rm -rf dist && tsc --skipLibCheck",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
